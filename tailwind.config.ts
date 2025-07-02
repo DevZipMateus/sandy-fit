@@ -63,19 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Urban color palette
-				urban: {
-					black: '#0a0a0a',
-					concrete: '#2a2a2a',
-					'concrete-light': '#3a3a3a',
-					neon: '#39ff14',
-					flame: '#ff3030',
-					electric: '#ffff00'
+				// Sandy Store Fit brand colors
+				sandy: {
+					black: '#1a1a1a',
+					gold: '#d4af37',
+					'gold-light': '#f4e4a6',
+					pink: '#e91e63',
+					'pink-light': '#f8bbd9',
+					white: '#ffffff'
 				}
 			},
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
-				'orbitron': ['Orbitron', 'monospace']
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -99,12 +99,14 @@ export default {
 						height: '0'
 					}
 				},
-				'glow': {
-					'0%, 100%': {
-						textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor'
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
 					},
-					'50%': {
-						textShadow: '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor'
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
 					}
 				},
 				'slide-up': {
@@ -121,7 +123,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'glow': 'glow 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.6s ease-out'
 			}
 		}

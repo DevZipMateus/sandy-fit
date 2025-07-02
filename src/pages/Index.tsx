@@ -1,25 +1,27 @@
 
 import React from 'react';
-import Header from '../components/Header';
-import HeroSection from '../components/HeroSection';
-import FeaturedCollection from '../components/FeaturedCollection';
-import Lookbook from '../components/Lookbook';
-import AboutBrand from '../components/AboutBrand';
-import Testimonials from '../components/Testimonials';
-import FinalCTA from '../components/FinalCTA';
-import Footer from '../components/Footer';
+import SandyHeader from '../components/SandyHeader';
+import SandyHero from '../components/SandyHero';
+import SandyAbout from '../components/SandyAbout';
+import SandyServices from '../components/SandyServices';
+import SandyPlans from '../components/SandyPlans';
+import SandyTestimonials from '../components/SandyTestimonials';
+import SandyContact from '../components/SandyContact';
+import SandyFooter from '../components/SandyFooter';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-urban-black">
-      <Header />
-      <HeroSection />
-      <FeaturedCollection />
-      <Lookbook />
-      <AboutBrand />
-      <Testimonials />
-      <FinalCTA />
-      <Footer />
+    <div className="min-h-screen bg-white">
+      <SandyHeader />
+      <SandyHero />
+      <SandyAbout />
+      <SandyServices />
+      <SandyPlans />
+      <SandyTestimonials />
+      <SandyContact />
+      <SandyFooter />
+      <WhatsAppButton />
     </div>
   );
 };
