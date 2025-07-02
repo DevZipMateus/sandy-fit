@@ -69,7 +69,7 @@ const SandyHero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-sandy-pink to-sandy-gold opacity-20 rounded-full blur-2xl transform scale-110"></div>
               <img 
-                src="/lovable-uploads/d5e471dc-42c3-4efe-b220-62c709c973e6.png" 
+                src="/lovable-uploads/7129160d-e8be-4cae-9e17-2d5289d0ff56.png" 
                 alt="Sandy Store Fit - Moda Fitness que Eleva a Autoestima"
                 className="relative z-10 w-full max-w-md mx-auto"
               />

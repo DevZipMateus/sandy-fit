@@ -34,7 +34,7 @@ const SandyFooter = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <img 
-              src="/lovable-uploads/d5e471dc-42c3-4efe-b220-62c709c973e6.png" 
+              src="/lovable-uploads/7129160d-e8be-4cae-9e17-2d5289d0ff56.png" 
               alt="Sandy Store Fit"
               className="h-16 mb-6"
             />

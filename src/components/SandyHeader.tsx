@@ -20,7 +20,7 @@ const SandyHeader = () => {
     { name: 'Sobre', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
     { name: 'Planos', href: '#planos' },
-    { name: 'Depoimentos', href: '#depoimentos' },
+    { name: 'Depoimentos', href: '#depoiments' },
     { name: 'Contato', href: '#contato' }
   ];
 
@@ -41,7 +41,7 @@ const SandyHeader = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/d5e471dc-42c3-4efe-b220-62c709c973e6.png" 
+              src="/lovable-uploads/7129160d-e8be-4cae-9e17-2d5289d0ff56.png" 
               alt="Sandy Store Fit - Moda Fitness Feminina"
               className="h-12 md:h-16 w-auto"
             />
