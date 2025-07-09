@@ -20,6 +20,7 @@ const SandyHeader = () => {
     { name: 'Sobre', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
     { name: 'Planos', href: '#planos' },
+    { name: 'Galeria', href: '#galeria' },
     { name: 'Depoimentos', href: '#depoiments' },
     { name: 'Contato', href: '#contato' }
   ];

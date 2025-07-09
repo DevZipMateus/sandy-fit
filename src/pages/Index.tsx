@@ -5,6 +5,7 @@ import SandyHero from '../components/SandyHero';
 import SandyAbout from '../components/SandyAbout';
 import SandyServices from '../components/SandyServices';
 import SandyPlans from '../components/SandyPlans';
+import SandyGallery from '../components/SandyGallery';
 import SandyTestimonials from '../components/SandyTestimonials';
 import SandyContact from '../components/SandyContact';
 import SandyFooter from '../components/SandyFooter';
@@ -18,6 +19,7 @@ const Index = () => {
       <SandyAbout />
       <SandyServices />
       <SandyPlans />
+      <SandyGallery />
       <SandyTestimonials />
       <SandyContact />
       <SandyFooter />
