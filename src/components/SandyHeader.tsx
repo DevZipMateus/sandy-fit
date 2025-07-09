@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -19,7 +18,6 @@ const SandyHeader = () => {
     { name: 'Início', href: '#inicio' },
     { name: 'Sobre', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
-    { name: 'Planos', href: '#planos' },
     { name: 'Galeria', href: '#galeria' },
     { name: 'Depoimentos', href: '#depoiments' },
     { name: 'Contato', href: '#contato' }
