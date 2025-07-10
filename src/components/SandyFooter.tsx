@@ -145,7 +145,7 @@ const SandyFooter = () => {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 Sandy Store Fit. Todos os direitos reservados.
+              © 2025 Sandy Store Fit. Todos os direitos reservados.
             </div>
             <div className="flex flex-wrap gap-6 text-sm">
               {policies.map((policy, index) => (
