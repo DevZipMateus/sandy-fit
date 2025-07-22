@@ -69,60 +69,61 @@ const SandyGallery = () => {
   return (
     <section id="galeria" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-semibold text-sandy-black mb-3 sm:mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="heading-secondary mb-3 sm:mb-4 md:mb-6">
             Nossa <span className="bg-gradient-pink bg-clip-text text-gray-950">Galeria</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto px-4">
+          <p className="text-body max-w-2xl mx-auto px-2 sm:px-4 lg:px-0">
             Confira nossa coleção exclusiva de conjuntos fitness. Peças que combinam estilo, conforto e qualidade.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {/* Grid responsivo melhorado */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer card-hover"
+              className="group relative overflow-hidden rounded-xl sm:rounded-2xl shadow-lg cursor-pointer card-hover"
               onClick={() => openModal(image.src)}
             >
               <img 
                 src={image.src} 
                 alt={image.alt} 
-                className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-300 group-hover:scale-110" 
+                className="w-full h-48 xs:h-52 sm:h-60 md:h-72 lg:h-80 object-cover transition-transform duration-300 group-hover:scale-110" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
-                  <h3 className="text-white font-medium text-base sm:text-lg">{image.title}</h3>
+                <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-2 sm:left-3 md:left-4 right-2 sm:right-3 md:right-4">
+                  <h3 className="text-white font-medium text-sm sm:text-base lg:text-lg">{image.title}</h3>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Modal para exibir imagem ampliada */}
+        {/* Modal melhorado para mobile */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
-            <div className="relative max-w-4xl max-h-full">
+          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-2 sm:p-4" onClick={closeModal}>
+            <div className="relative max-w-4xl max-h-full w-full">
               <button 
                 onClick={closeModal} 
-                className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition-colors z-10"
+                className="absolute top-1 right-1 sm:top-2 sm:right-2 md:top-4 md:right-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-1.5 sm:p-2 transition-colors z-10"
               >
-                <X size={20} className="sm:w-6 sm:h-6" />
+                <X size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </button>
               <img 
                 src={selectedImage} 
                 alt="Imagem ampliada" 
-                className="max-w-full max-h-[90vh] object-contain rounded-lg" 
+                className="max-w-full max-h-[95vh] object-contain rounded-lg mx-auto" 
                 onClick={(e) => e.stopPropagation()} 
               />
             </div>
           </div>
         )}
 
-        <div className="text-center mt-8 sm:mt-12">
+        <div className="text-center mt-6 sm:mt-8 md:mt-12">
           <button 
             onClick={() => window.open('https://wa.me/5566997156722', '_blank')} 
-            className="btn-primary inline-flex items-center gap-2 text-sm sm:text-base px-4 sm:px-6"
+            className="btn-primary inline-flex items-center gap-2"
           >
             Ver Mais Produtos
           </button>

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -19,7 +20,7 @@ const SandyHeader = () => {
     { name: 'Sobre', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
     { name: 'Galeria', href: '#galeria' },
-    { name: 'Depoimentos', href: '#depoiments' },
+    { name: 'Depoimentos', href: '#depoimentos' },
     { name: 'Contato', href: '#contato' }
   ];
 
@@ -36,23 +37,23 @@ const SandyHeader = () => {
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+          {/* Logo - Melhorado para responsividade */}
           <div className="flex-shrink-0">
             <img 
               src="/lovable-uploads/7129160d-e8be-4cae-9e17-2d5289d0ff56.png" 
               alt="Sandy Store Fit - Moda Fitness Feminina"
-              className="h-12 md:h-16 w-auto"
+              className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto"
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Melhorado para tablets */}
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sandy-black hover:text-sandy-pink transition-colors duration-300 font-medium relative group"
+                className="text-sandy-black hover:text-sandy-pink transition-colors duration-300 font-medium relative group text-sm xl:text-base"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-pink transition-all duration-300 group-hover:w-full"></span>
@@ -60,25 +61,25 @@ const SandyHeader = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Melhorado */}
           <button
-            className="md:hidden text-sandy-black hover:text-sandy-pink transition-colors duration-300"
+            className="lg:hidden text-sandy-black hover:text-sandy-pink transition-colors duration-300 p-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Melhorado */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg">
-            <div className="px-4 py-6 space-y-4">
+          <div className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-t">
+            <div className="px-3 sm:px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-sandy-black hover:text-sandy-pink transition-colors duration-300 font-medium py-2"
+                  className="block w-full text-left text-sandy-black hover:text-sandy-pink transition-colors duration-300 font-medium py-2 text-sm sm:text-base"
                 >
                   {item.name}
                 </button>
